@@ -55,3 +55,16 @@ if (currentTheme) {
     toggleDarkLightMode(true);
   }
 }
+
+// Toggle Mobile Menu
+const mobileMenu = document.getElementById("mobile-menu");
+
+mobileMenu.addEventListener("click", () => {
+  document.querySelector(".nav").classList.toggle("toggleMenu");
+  mobileMenu.classList.toggle("close-menu");
+  if (mobileMenu.classList.contains("close-menu")) {
+    mobileMenu.classList.replace("fa-bars", "fa-close");
+  } else {
+    mobileMenu.classList.replace("fa-close", "fa-bars");
+  }
+});
